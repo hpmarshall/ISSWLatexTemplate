@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 AUG 2023 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 AUG 2023 23:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1064,32 +1064,61 @@ LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <12> not available
 (Font)              Font shape `OT1/txss/m/sl' tried instead on input line 77.
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 (Font)              scaled to size 11.39996pt on input line 77.
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
+
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 108--110
+\OT1/txss/m/n/10 All color pho-tographs should be in RGB color
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
 <./issw_logo.png, id=10, 776.9025pt x 860.21375pt>
 File: ./issw_logo.png Graphic file (type png)
  <use ./issw_logo.png>
-Package pdftex.def Info: ./issw_logo.png used on input line 110.
+Package pdftex.def Info: ./issw_logo.png used on input line 115.
 (pdftex.def)             Requested size: 162.18071pt x 179.5739pt.
 
-Underfull \hbox (badness 5741) in paragraph at lines 116--117
+Underfull \hbox (badness 5741) in paragraph at lines 121--122
 \OT1/txss/m/n/10 If you cre-ated your manuscript in Word or
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 116--117
+Underfull \hbox (badness 4132) in paragraph at lines 121--122
 \OT1/txss/m/n/10 other word pro-cess-ing soft-ware such as La-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--121
+Underfull \hbox (badness 1127) in paragraph at lines 124--126
+\OT1/txss/m/n/10 dur-ing the con-ver-sion pro-cess. Al-ways re-view
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
 
  []
 
@@ -1110,7 +1139,7 @@ s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/he
 lvetic/uhvr8a.pfb>
 Output written on ISSW2023_ExtendedAbstractFormattingGuidelines_latex.pdf (2 pa
-ges, 880590 bytes).
+ges, 880475 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
