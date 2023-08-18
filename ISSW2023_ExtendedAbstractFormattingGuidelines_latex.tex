@@ -2,7 +2,7 @@
 %
 % LaTeX Template for extended abstracts for the
 % ISSW 2023 in Bend, Oregon.  
-%   Slight modifications to the amazing template by the 2018 ISSW organizers, in particular JT Fisher.  THANK YOU!
+%   Slight modifications to the amazing template by the 2018 ISSW organizers, in particular JT Fischer.  THANK YOU!
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %               * INSTRUCTIONS *
@@ -88,7 +88,7 @@ Do not include any page numbers, headers or footers in your manuscript.
 Please type, within the 2.5 cm margin, the corresponding author's address in the lower left corner of your first page (see lower left corner of the first page of these instructions).
 %
 \subsection{References}
-List all bibliographic references at the end of the paper in alphabetical order by first author. When referring to them in the text, type the corresponding author's surname, followed by the year of publication, e.g. \cite{McClung2006}. When there are three or more authors, use the first author's name followed by "et al.", e.g. \cite{Greene2006} as an example of a proceedings paper or \cite{Fisher2022} as an example of a journal paper. Use referencing style as used in Natural Hazards and Earth System Sciences (see sample references at the end of these instructions).
+List all bibliographic references at the end of the paper in alphabetical order by first author. When referring to them in the text, type the corresponding author's surname, followed by the year of publication, e.g. \cite{McClung2006}. When there are three or more authors, use the first author's name followed by "et al.", e.g. \cite{Greene2006} as an example of a proceedings paper or \cite{Fischer2022} as an example of a journal paper. Use referencing style as used in Natural Hazards and Earth System Sciences (see sample references at the end of these instructions).
 
 %
 \subsection{Equation numbers}
@@ -135,27 +135,34 @@ For questions about formatting and content, please contact Erich Peitzsch (erich
 \section*{ACKNOWLEDGEMENT} 
 Thank You.
 % ===================================================================================================
-\section*{REFERENCES}
-\bibliographystyle{apalike}
-\renewcommand{\section}[2]{} % delete bibliography title
-\begin{thebibliography}{}
 
-\bibitem[Greene et al. (2006)]{Greene2006}
-Greene, E., T. Wiesinger, K. W. Birkeland, C. Coleou, A. Jones, and G. Statham.
-\newblock {Fatal avalanche accidents and forecasted danger levels: Patterns in the United States, Canada, Switzerland and France.}
-\newblock {\em Proceedings of the International Snow Science Workshop, Telluride, CO}, , 640-649, 2006.
+\bibliographystyle{Copernicus}  % style file from NHESS
+\bibliography{issw_bibliography}
 
-\bibitem[McClung and Schaerer, 2006]{McClung2006}
-McClung, D.~M. and Schaerer, P.
-\newblock {\em {The avalanche handbook}}.
-\newblock The Mountaineers Books, Seattle, WA, 3rd edition edition, 2006.
 
-\bibitem[Fisher et al. (2022)]{Fisher2022}
-Fisher, K. C., Haegeli, P., and Mair, P.
-\newblock {Travel and terrain advice statements in public avalanche bulletins: a quantitative analysis of who uses this information, what makes it useful, and how it can be improved for users.}
-\newblock {Nat. Hazards Earth Syst. Sci, 22, 1973-2000, https://doi.org/10.5194/nhess-22-1973-2022, 2022}
 
-\end{thebibliography}
+%%%%. IF YOU WANT TO DO BIBLIOGRAPHY BY HAND, UNCOMMENT BELOW
+%\section*{REFERENCES}
+%\bibliographystyle{apalike}
+%\renewcommand{\section}[2]{} % delete bibliography title
+%\begin{thebibliography}{}
+%
+%\bibitem[Greene et al. (2006)]{Greene2006}
+%Greene, E., T. Wiesinger, K. W. Birkeland, C. Coleou, A. Jones, and G. Statham.
+%\newblock {Fatal avalanche accidents and forecasted danger levels: Patterns in the United States, Canada, Switzerland and France.}
+%\newblock {\em Proceedings of the International Snow Science Workshop, Telluride, CO}, , 640-649, 2006.
+%
+%\bibitem[McClung and Schaerer, 2006]{McClung2006}
+%McClung, D.~M. and Schaerer, P.
+%\newblock {\em {The avalanche handbook}}.
+%\newblock The Mountaineers Books, Seattle, WA, 3rd edition edition, 2006.
+%
+%\bibitem[Fischer et al. (2022)]{Fischer2022}
+%Fischer, K. C., Haegeli, P., and Mair, P.
+%\newblock {Travel and terrain advice statements in public avalanche bulletins: a quantitative analysis of who uses this information, what makes it useful, and how it can be improved for users.}
+%\newblock {Nat. Hazards Earth Syst. Sci, 22, 1973-2000, https://doi.org/10.5194/nhess-22-1973-2022, 2022}
+%
+%\end{thebibliography}
 
 
 % ===================================================================================================
