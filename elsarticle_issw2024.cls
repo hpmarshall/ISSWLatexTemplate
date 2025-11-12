@@ -34,13 +34,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
- \def\RCSfile{elsarticle_issw2018}%
+ \def\RCSfile{elsarticle_issw2024}%
  \def\RCSversion{1.20b}%
  \def\RCSdate{2009/09/17}%
  \def\@shortjnl{\relax}
  \def\@journal{Elsevier Ltd} \def\@company{Elsevier Ltd}
  \def\@issn{000-0000}
- \def\@shortjid{elsarticle_issw2018}
+ \def\@shortjid{elsarticle_issw2024}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{\@shortjid}[\RCSdate, \RCSversion: \@journal]
 \def\ABD{\AtBeginDocument}
@@ -253,8 +253,8 @@
 \newbox\absbox
 \renewenvironment{abstract}{\global\setbox\absbox=\vbox\bgroup
   \hsize=\textwidth\def\baselinestretch{1}%
-  \noindent\unskip\normalsize{ABSTRACT:\hspace{0.3cm}}}
-%  \par\medskip\noindent\unskip\ignorespaces}
+  \noindent\unskip\normalsize{\vspace*{-3em}\\ ABSTRACT:\hspace{0.3cm}}}  % patch sepration length
+  %\par\medskip\noindent\unskip\ignorespaces}
  {\egroup}
 
 \newbox\keybox
@@ -436,8 +436,9 @@
        Preprint submitted to \ifx\@journal\@empty Elsevier
        \else\@journal\fi\hfill\today}%
      \let\@evenfoot\@oddfoot}
-\def\@seccntDot{.}
+\def\@seccntDot{}
 \def\@seccntformat#1{\csname the#1\endcsname\@seccntDot\hskip 0.5em}
+
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
            {18\p@ \@plus 6\p@ \@minus 3\p@}%
@@ -800,12 +801,33 @@
 \renewcommand{\headrulewidth}{0pt}
 \lhead{}\chead{}\rhead{}
 \lfoot{}\cfoot{}\rfoot{}
-\usepackage{sectsty}
-\allsectionsfont{\mdseries\normalsize}
-\subsectionfont{\itshape\mdseries\normalsize\underline}
+
+%\usepackage{sectsty}
+%\allsectionsfont{\mdseries\normalsize}
+%\subsectionfont{\itshape\mdseries\normalsize\underline}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+           {9\p@ \@plus 6\p@ \@minus 3\p@}%
+           {9\p@ \@plus 6\p@ \@minus 3\p@}%
+           {\mdseries\normalsize}}
+           
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+           {9\p@ \@plus 6\p@ \@minus 3\p@}%
+           {6 \p@ \@plus 6\p@ \@minus 3\p@}%
+           {\noindent \itshape\mdseries\normalsize\underline}}
+           
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+           {9\p@ \@plus 6\p@ \@minus 3\p@}%
+           {\p@}%
+           {\normalfont\normalsize\itshape}}
+
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+
 
 \renewcommand{\theaffn}{\arabic{affn}}
 
 \endinput
 %%
-%% End of file `elsarticle_issw2018.cls'.
+%% End of file `elsarticle_issw2024.cls'.
