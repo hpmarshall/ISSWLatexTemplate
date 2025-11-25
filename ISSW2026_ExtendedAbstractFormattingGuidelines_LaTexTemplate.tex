@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% LaTeX Template for extended abstracts for the
+% ISSW 2026 in Whistler, Canada.  
+%   Slight modifications to the amazing template by the 2018 ISSW organizers, in particular JT Fischer.  THANK YOU!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               * INSTRUCTIONS *
+%
+%           **** VERY IMPORTANT ****
+%
+%
+%  1 - Rename this file
+%  
+%  2 - Write your contribution
+%
+%  3 - Compile with: pdflatex, then bibtex (if using citations), then pdflatex twice more
+%
+%  4 - Follow instructions below and come to Whistler
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[3p,authoryear,times,twocolumn]{elsarticle_issw}
+
+% include packages as needed, such as
+\usepackage[utf8]{inputenc}%\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx,color}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage{pdfcomment}
+
+%% sanserif for math equations
+\usepackage[cm]{sfmath}
+
+
+%% default paragraph:  noindent
+\setlength\parindent{0pt}
+
+
+\begin{document}
+\begin{frontmatter}
+
+\title{INSTRUCTIONS FOR FORMATTING YOUR PAPER
+INTERNATIONAL SNOW SCIENCE WORKSHOP 2026, WHISTLER, CANADA}
+
+\author[1]{Depthina A. Hoar\corref{complete_address}}
+\cortext[complete_address]{Corresponding author address:\\Depthina A. Hoar, Institute of Hoarticulture,\\Walla Walla, WA 98523-1234;\\tel: +1 509-555-1234; fax: +1 509-555-1235\\
+email: dhoar@depth.snow}
+\author[2]{Precipina B. Particle}
+\author[3]{Surfer C. Hoar}
+
+\address[1]{Institute of Hoarticulture, Walla Walla, WA, USA}
+\address[2]{Avalanche Forecasting Centre, Skookumchuk, BC, Canada}
+\address[3]{Highway Safety Office, Brunico, Italy}
+
+
+\begin{abstract}
+These instructions are laid out in the same format as is requested for ISSW 2026 conference proceedings. The abstract should be less than 300 words. It can be either the same as your initial short abstracts or you can make changes as you wish, for example include new results or insights you have obtained since your initial submission.
+\end{abstract}
+
+\begin{keyword}
+Select 3-6 keywords.
+\end{keyword}
+
+\end{frontmatter}
+
+% ===================================================================================================
+\section{INTRODUCTION}
+\label{sec:intro}
+
+All ISSW presenters - both oral and poster presenters - are required to submit a paper (maximum 8 pages) that describes their presentation topic in more detail for publication in the ISSW 2026 proceedings. At this ISSW, the conference proceedings will only be published electronically.
+
+%
+% ===================================================================================================
+\section{PAPER DEADLINE}
+
+Papers must be received by \textbf{\underline{August 24, 2026}}.\\
+
+We cannot guarantee that late papers will be included in the conference line-up and the proceedings publication. \textbf{Your oral or poster presentation slot is conditional on us receiving your paper by this date.}
+%
+% ===================================================================================================
+\section{LANGUAGE} 
+Authors are greatly encouraged to submit their papers in English, since they have a far wider reach.
+%
+% ===================================================================================================
+\section{PAGE LIMIT, LAYOUT \& TEXT FONT}
+Papers are limited to \textbf{\underline{no more than 8 pages}}, including references, appendices, etc., and must be formatted on A4 pages (210 mm x 297 mm) with 2.5 cm (about 1 inch) margins on all sides. The document class automatically handles the two-column layout with appropriate spacing.\\
+
+The text is automatically placed in newspaper style columns with a 0.8 cm space between columns. If necessary, figures, photos, or charts may span the two columns using \verb|figure*| or \verb|table*| environments (see comments in the figure and table examples).
+
+%
+\subsection{Titles, headings and footnotes}
+The title, authors, and affiliations are automatically formatted in the frontmatter section (see lines 43-54). The title appears in CAPITAL LETTERS, and author information is properly formatted.\\
+
+Major headings are Arabic-numbered in CAPITAL LETTERS (as shown in these instructions). Use \verb|\section{}| to create major headings.\\
+
+Secondary headings are in italics and underlined (as shown in these instructions). Use \verb|\subsection{}| to create secondary headings. Footnotes should be indicated in the text with an asterisk (*).\\
+
+Do not include any page numbers, headers or footers in your paper.
+
+\subsection{Author's corresponding address}
+The corresponding author's address is automatically formatted in the frontmatter using \verb|\cortext{}| (see line 47-48). This appears in the lower left corner of the first page.
+%
+\subsection{References}
+
+List all bibliographic references at the end of the paper in alphabetical order by first author. When referring to them in the text, use the \verb|\cite{}| command with the citation key, e.g., \cite{McClung2006}. Use referencing style as used in \href{https://www.natural-hazards-and-earth-system-sciences.net/submission.html#references}{Natural Hazards and Earth System Sciences} (see sample references at the end of these instructions).
+
+%
+\subsection{Equation numbers}
+Equations are numbered automatically. Use the \verb|equation| environment and reference them with \verb|\ref{}| or \verb|\eqref{}|.
+
+\begin{equation}\label{eq:1}
+  W = \int_{x_0}^{x_{1}} F\, dx
+\end{equation}
+%
+\subsection{Units}
+The International System of Units (SI units) should be used in the ISSW Proceedings.
+%
+% ===================================================================================================
+\section{FIGURES, TABLES AND CAPTIONS}
+Presentations at the conference do not usually allow enough time for in-depth understanding; therefore, it is important to include your most complex graphs, diagrams, etc., in your extended abstract.\\
+%
+
+Figures and tables should be reduced so that they may be incorporated into the text along with the appropriate pages, with full captions typed in (see Figure \ref{fig:issw_logo} and Table \ref{tab:example_table}). Figures and tables can be either single column width or full width spanning both columns if needed for complex content.
+
+All color photographs should be in RGB color space, and at least 160 ppi at the size shown in your paper. A table or figure that cannot be placed in the same orientation as the text should be rotated 90 degrees counterclockwise so that the figure and caption may be read by rotating the published proceedings 90 degrees clockwise.\\
+
+Tables do not need to exactly match the style shown below (table 1). To meet accessibility requirements, tables need to be text-based and not inserted as images.\\
+
+Company logos and identification numbers are not permitted on your illustrations.
+
+% Example of a single-column width figure (fits within one column)
+% 
+% SINGLE-COLUMN FIGURE (current example):
+%   - Uses: \begin{figure}[h] ... \end{figure}
+%   - Width: width=1.\columnwidth (fits in one column)
+%   - Use when: Figure fits comfortably in one column
+%
+% FULL-WIDTH FIGURE (spans both columns):
+%   - Uses: \begin{figure*}[h] ... \end{figure*}  (note the asterisk *)
+%   - Width: width=1.\textwidth (spans entire page width)
+%   - Use when: Figure is too wide for one column or needs more space
+%   Example:
+%   \begin{figure*}[h]
+%    \centering
+%    \includegraphics[width=1.\textwidth]{./your_image}
+%    \caption{Your caption here.}
+%       \label{fig:your_label}
+%   \end{figure*}
+\begin{figure}[h]
+ \centering
+ \pdftooltip{\includegraphics[width=1.\columnwidth]{./issw_logo}}{A blue background with white text and snowflake. The text says ISSW Whistler 2026.}
+ \caption{The International Snow Science Workshop (ISSW) 2026 is taking place in Whistler, Canada.}
+    \label{fig:issw_logo}
+\end{figure}
+
+% Example of a single-column width table (fits within one column)
+%
+% SINGLE-COLUMN TABLE (current example):
+%   - Uses: \begin{table}[h] ... \end{table}
+%   - Fits within: One column width
+%   - Use when: Table has few columns or fits comfortably in one column
+%
+% FULL-WIDTH TABLE (spans both columns):
+%   - Uses: \begin{table*}[h] ... \end{table*}  (note the asterisk *)
+%   - Spans: Entire page width (both columns)
+%   - Use when: Table has many columns or is too wide for one column
+%   Example:
+%   \begin{table*}[h]
+%    \centering
+%    \caption{Your caption here.}
+%    \label{tab:your_label}
+%    \begin{tabular}{...}
+%     % your table content
+%    \end{tabular}
+%   \end{table*}
+\begin{table}[h]
+ \centering
+ \caption{\textbf{A table showing a series of values.}}
+ \label{tab:example_table}
+ \begin{tabular}{lcc}
+  \hline
+  \rowcolor{gray!30}
+  \textbf{\textit{Location}} & \textbf{\textit{Value 1 (cm)}} & \textbf{\textit{Value 2 (m)}} \\
+  \hline
+  Location a & 9.0 & 7.0 \\
+  Location b & 19.5 & 5.6 \\
+  Location c & 27.7 & 9.6 \\
+  Location d & 16.1 & 2.4 \\
+  \hline
+ \end{tabular}
+\end{table}
+
+% ===================================================================================================
+
+\section{ACCESSIBILITY REQUIREMENT}
+All papers must meet the WCAG 2.1 Level AA accessibility standard. This means your document should be readable and usable by people using screen readers or other assistive technologies.\\
+
+Follow the simple steps below to make sure your paper is accessible:
+\begin{itemize}
+ \item Use proper LaTeX sectioning commands (\verb|\section{}|, \verb|\subsection{}|) for headings.
+ \item Add alt text for all images using \verb|\pdftooltip{}| (see the figure example on line 152).
+ \item Check color contrast in your figures and tables.
+ \item Ensure tables are created with \verb|\begin{tabular}| (not inserted as images).
+ \item Compile directly to PDF using \verb|pdflatex| (not print-to-PDF).
+\end{itemize}
+Check out the \href{https://guides.lib.montana.edu/accessibility/checklist}{MSU checklist} for more detailed information about document accessibility.
+
+% ===================================================================================================
+
+\section{SUBMISSION}
+If you created your paper in LaTeX, \textbf{convert your paper to PDF file format and submit BOTH your .tex and PDF files.}\\
+
+Check the paper to ensure nothing changed during the conversion process. Always review formatting, citations, figures, tables, and equations closely in the PDF after converting.\\
+
+%
+% ===================================================================================================
+\section{QUESTIONS}
+%
+For questions about the submission process, please contact \href{mailto:issw2026-program@icsevents.com}{issw2026-program@icsevents.com}.\\
+
+For questions about formatting and content, please contact the ISSW 2026 Technical Committee at \href{mailto:technical.committee@issw2026.com}{technical.committee@issw2026.com}. % 
+
+% ===================================================================================================
+\phantomsection
+\addcontentsline{toc}{section}{ACKNOWLEDGEMENTS}
+\section*{ACKNOWLEDGEMENTS}
+Thank you.
+% ===================================================================================================
+
+\bibliographystyle{Copernicus}  % style file from NHESS
+
+\setlength{\bibsep}{0.5em plus 0.3ex}
+
+% Make bibliography heading all caps
+\renewcommand{\refname}{REFERENCES}
+\renewcommand{\bibname}{REFERENCES}
+\phantomsection
+\addcontentsline{toc}{section}{REFERENCES}
+\bibliography{issw_bibliography}
+
+
+
+
+%%%%. IF YOU WANT TO DO BIBLIOGRAPHY BY HAND, UNCOMMENT BELOW
+%\section*{REFERENCES}
+%\bibliographystyle{apalike}
+%\renewcommand{\section}[2]{} % delete bibliography title
+%\begin{thebibliography}{}
+%
+%\bibitem[Greene et al. (2006)]{Greene2006}
+%Greene, E., T. Wiesinger, K. W. Birkeland, C. Coleou, A. Jones, and G. Statham.
+%\newblock {Fatal avalanche accidents and forecasted danger levels: Patterns in the United States, Canada, Switzerland and France.}
+%\newblock {\em Proceedings of the International Snow Science Workshop, Telluride, CO}, , 640-649, 2006.
+%
+%\bibitem[McClung and Schaerer, 2006]{McClung2006}
+%McClung, D.~M. and Schaerer, P.
+%\newblock {\em {The avalanche handbook}}.
+%\newblock The Mountaineers Books, Seattle, WA, 3rd edition edition, 2006.
+%
+%\bibitem[Fisher et al. (2022)]{Fisher2022}
+%Fisher, K. C., Haegeli, P., and Mair, P.
+%\newblock {Travel and terrain advice statements in public avalanche bulletins: a quantitative analysis of who uses this information, what makes it useful, and how it can be improved for users.}
+%\newblock {Nat. Hazards Earth Syst. Sci, 22, 1973-2000, https://doi.org/10.5194/nhess-22-1973-2022, 2022}
+%
+%\end{thebibliography}
+
+
+% ===================================================================================================
+\end{document}
+% --- THIS IS THE END MY FRIEND ---
+% ===================================================================================================
+

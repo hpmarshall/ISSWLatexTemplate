@@ -34,13 +34,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
- \def\RCSfile{elsarticle_issw2024}%
+ \def\RCSfile{elsarticle_issw}%
  \def\RCSversion{1.20b}%
  \def\RCSdate{2009/09/17}%
  \def\@shortjnl{\relax}
  \def\@journal{Elsevier Ltd} \def\@company{Elsevier Ltd}
  \def\@issn{000-0000}
- \def\@shortjid{elsarticle_issw2024}
+ \def\@shortjid{elsarticle_issw}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{\@shortjid}[\RCSdate, \RCSversion: \@journal]
 \def\ABD{\AtBeginDocument}
@@ -109,6 +109,7 @@
 
 \let\@tnotes\@empty
 \RequirePackage{pifont}
+\RequirePackage{ulem}
 \newcounter{tnote}
 \def\tnotetext[#1]#2{\g@addto@macro\@tnotes{%
   \refstepcounter{tnote}\elsLabel{#1}%
@@ -701,9 +702,9 @@
 
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip\footnotesize
-  \sbox\@tempboxa{#1: #2}%
+  \sbox\@tempboxa{\textbf{#1: #2}}%
   \ifdim \wd\@tempboxa >\hsize
-    #1: #2\par
+    \textbf{#1: #2}\par
   \else
     \global \@minipagefalse
     \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
@@ -718,6 +719,52 @@
    \def\@urlcolor{blue}
    \def\@menucolor{blue}
    \def\@pagecolor{blue}
+   % Redefine @sect to underline subsection text (not section number)
+   % Handle both cases: with hyperref/nameref and without
+   \def\els@newsect#1#2#3#4#5#6[#7]#8{%
+     \ifnum #2>\c@secnumdepth
+       \let\@svsec\@empty
+     \else
+       \refstepcounter{#1}%
+       \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+     \fi
+     \@tempskipa #5\relax
+     \ifdim \@tempskipa>\z@
+       \begingroup
+         #6{%
+           \@hangfrom{\hskip #3\relax\@svsec}%
+             \interlinepenalty \@M
+             \ifnum #2=2
+               \underline{#8}%
+             \else
+               #8%
+             \fi\@@par}%
+       \endgroup
+       \csname #1mark\endcsname{#7}%
+       \addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+         \protect\numberline{\csname the#1\endcsname}\fi#7}%
+     \else
+       \def\@svsechd{%
+         #6{\hskip #3\relax
+         \@svsec
+         \ifnum #2=2
+           \underline{#8}%
+         \else
+           #8%
+         \fi}%
+         \csname #1mark\endcsname{#7}%
+         \addcontentsline{toc}{#1}{\ifnum #2>\c@secnumdepth \else
+           \protect\numberline{\csname the#1\endcsname}\fi#7}}%
+     \fi
+     \@xsect{#5}}%
+   % Apply to NR@sect if nameref is loaded, otherwise to @sect
+   \@ifpackageloaded{nameref}{%
+     \let\els@oldNRsect\NR@sect
+     \let\NR@sect\els@newsect
+   }{%
+     \let\els@old@sect\@sect
+     \let\@sect\els@newsect
+   }%
 \begingroup
   \@makeother\`%
   \@makeother\=%
@@ -811,10 +858,8 @@
            {9\p@ \@plus 6\p@ \@minus 3\p@}%
            {\mdseries\normalsize}}
            
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-           {9\p@ \@plus 6\p@ \@minus 3\p@}%
-           {6 \p@ \@plus 6\p@ \@minus 3\p@}%
-           {\noindent \itshape\mdseries\normalsize\underline}}
+% Subsection formatting: underline only the text, not the section number
+% This will be redefined after hyperref loads (see AtBeginDocument hook above)
            
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
            {9\p@ \@plus 6\p@ \@minus 3\p@}%
@@ -830,4 +875,4 @@
 
 \endinput
 %%
-%% End of file `elsarticle_issw2024.cls'.
+%% End of file `elsarticle_issw.cls'.

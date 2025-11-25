@@ -38,6 +38,8 @@
 *.tex~
 *.thm
 *.toc
+*.upa
+*.upb
 *.vrb
 *.xdy
 *.xml
