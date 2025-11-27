@@ -719,6 +719,8 @@
    \def\@urlcolor{blue}
    \def\@menucolor{blue}
    \def\@pagecolor{blue}
+   % Accessibility: Ensure proper PDF structure
+   \pdfstringdefDisableCommands{\let\\\space}
    % Redefine @sect to underline subsection text (not section number)
    % Handle both cases: with hyperref/nameref and without
    \def\els@newsect#1#2#3#4#5#6[#7]#8{%
