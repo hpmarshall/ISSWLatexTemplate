@@ -1,0 +1,196 @@
+\DocumentMetadata{
+  lang = en,
+  tagging = on,
+  pdfstandard = ua-2
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% LaTeX Template for extended abstracts for the
+% ISSW 2026 in Whistler, Canada.  
+%  To meet accessibility Requirements this is a completly new template. The .cls file is therefore new and in the .tex file you wil find some slight adaptions of how to handle figures and tables 
+% Cheers Machtl 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               * INSTRUCTIONS *
+%
+%           **** VERY IMPORTANT ****
+%
+%
+%  1 - Rename this file
+%  
+%  2 - Write your contribution
+%
+%  3 - Compile with: LuaLaTeX, Biber, LuaLaTeX, LuaLaTeX --> PDF/UA-2-compliant structure
+%
+%  4 - Follow instructions below and come to Whistler
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{issw}
+
+\usepackage[base]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tagpdf}
+\tagpdfsetup{
+  activate-all            = true,
+  math/mathml/luamml/load = true,
+  math/alt/use            = true
+}
+
+\addbibresource{example.bib}
+
+\usepackage{parskip} % no indent with new paragraph
+
+% ================= TITLE, AUTHOR==================================================
+\title{INSTRUCTIONS FOR FORMATTING YOUR PAPER\\
+INTERNATIONAL SNOW SCIENCE WORKSHOP 2026, WHISTLER, CANADA}
+
+\author[1]{Depthina A. Hoar\corref{complete\_address}}
+\author[2]{Precipina B. Particle}
+\author[3]{Surfer C. Hoar}
+
+\address[1]{Institute of Hoarticulture, Walla Walla, WA, USA}
+\address[2]{Avalanche Forecasting Centre, Skookumchuk, BC, Canada}
+\address[3]{Highway Safety Office, Brunico, Italy}
+
+\cortext[complete\_address]{
+Depthina A. Hoar, Institute of Hoarticulture,\\
+Walla Walla, WA 98523-1234;\\
+tel: +1 509-555-1234; fax: +1 509-555-1235\\
+email: dhoar@depth.snow}
+% ===================================================================
+
+\begin{document}
+
+% ==================== ABSTRACT ===============================================
+\begin{abstract}
+These instructions are laid out in the same format as is requested for ISSW 2026 conference proceedings. The abstract should be less than 300 words. It can be either the same as your initial short abstracts or you can make changes as you wish, for example include new results or insights you have obtained since your initial submission.
+\end{abstract}
+
+\begin{keyword}
+Select 3-6 keywords.
+\end{keyword}
+
+\maketitle
+% ===================================================================
+
+
+\section{INTRODUCTION}
+All ISSW presenters - both oral and poster pre-
+senters - are required to submit a paper (maximum
+8 pages) that describes their presentation topic in
+more detail for publication in the ISSW 2026 pro-
+ceedings. At this ISSW, the conference proceedings
+will only be published electronically.
+
+\section{PAPER DEADLINE}
+
+Papers must be received by \textbf{\bolduline{August 24, 2026}}.\\
+
+We cannot guarantee that late papers will be included in the conference line-up and the proceedings publication. \textbf{Your oral or poster presentation slot is conditional on us receiving your paper by this date.}
+
+\section{LANGUAGE} 
+Authors are greatly encouraged to submit their papers in English, since they have a far wider reach.
+
+\section{PAGE LIMIT, LAYOUT \& TEXT FONT}
+Papers are limited to \textbf{\bolduline{no more than 8 pages}}, including references, appendices, etc., and must be formatted on A4 pages (210 mm x 297 mm) with 2.5 cm (about 1 inch) margins on all sides. The document class automatically handles the two-column layout with appropriate spacing.\\
+
+The text is automatically placed in newspaper style columns with a 0.8 cm space between columns. If necessary, figures, photos, or charts may span the two columns using \verb|figure*| or \verb|table*| environments.
+
+\subsection{Titles, headings and footnotes}
+The title, authors, and affiliations are automatically formatted in the frontmatter section. The title appears in CAPITAL LETTERS, and author information is properly formatted.\\
+
+Major headings are Arabic-numbered in CAPITAL LETTERS (as shown in these instructions). Use \verb|\section{}| to create major headings.\\
+
+Secondary headings are in italics and underlined (as shown in these instructions). Use \verb|\subsection{}| to create secondary headings. Footnotes should be indicated in the text with an asterisk (*).\\
+
+Do not include any page numbers, headers or footers in your paper.
+
+\subsection{Author's corresponding address}
+The corresponding author's address is automatically formatted in the frontmatter using \verb|\cortext{}|. This appears in the lower left corner of the first page.
+
+\subsection{References Style}
+
+List all bibliographic references at the end of the paper in alphabetical order by first author. When referring to them in the text, use the \verb|\textcite{}| command with the citation key, e.g., \textcite{McClung2006}. Use referencing style as used in \href{https://www.natural-hazards-and-earth-system-sciences.net/submission.html}%
+{\textit{Natural Hazards and Earth System Sciences}}
+(see sample references at the end of these instructions) \parencite{McClung2006}.
+
+\subsection{Equation numbers}
+Equations are numbered automatically. Use the \verb|equation| environment and reference them with \verb|\ref{}| or \verb|\eqref{}|.
+
+\begin{equation}\label{eq:1}
+  W = \int_{x_0}^{x_{1}} F\, dx
+\end{equation}
+
+
+
+
+\subsection{Units}
+The International System of Units (SI units) should be used in the ISSW Proceedings.
+
+\section{FIGURES, TABLES AND CAPTIONS}
+Presentations at the conference do not usually allow enough time for in-depth understanding; therefore, it is important to include your most complex graphs, diagrams, etc., in your extended abstract.\\
+
+Figures and tables should be reduced so that they may be incorporated into the text along with the appropriate pages, with full captions typed in (see Figure \ref{fig:issw_logo} and Table \ref{tab:example_table}). Figures and tables can be either single column width or full width spanning both columns if needed for complex content.\\
+
+All color photographs should be in RGB color space, and at least 160 ppi at the size shown in your paper. A table or figure that cannot be placed in the same orientation as the text should be rotated 90 degrees counterclockwise so that the figure and caption may be read by rotating the published proceedings 90 degrees clockwise.\\
+
+Tables do not need to exactly match the style shown below (table 1). To meet accessibility requirements, tables need to be text-based and not inserted as images.\\
+
+Company logos and identification numbers are not permitted on your illustrations.\\
+
+%--- Figures
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[
+    width=1.\columnwidth,
+    alt={A blue background with white text and snowflake. The text says ISSW Whistler 2026.}
+  ]{./issw_logo.png}
+  \caption{The International Snow Science Workshop (ISSW) 2026 is taking place in Whistler, Canada.}
+  \label{fig:issw_logo}
+\end{figure}
+
+\begin{taggedtable}{h}{tab:example_table}{A table showing a series of values.}{lcc}
+  \HeaderRow{\textbf{\textit{Location}} & \textbf{\textit{Value 1 (cm)}} & \textbf{\textit{Value 2 (m)}}}
+  \Row{Location a & 9.0 & 7.0}
+  \Row{Location b & 19.5 & 5.6}
+  \Row{Location c & 27.7 & 9.6}
+  \Row{Location d & 16.1 & 2.4}
+\end{taggedtable}
+
+
+
+\section{ACCESSIBILITY REQUIREMENT}
+All papers must meet the WCAG 2.1 Level AA accessibility standard. This means your document should be readable and usable by people using screen readers or other assistive technologies.\\
+
+Follow the simple steps below to make sure your paper is accessible:  
+\begin{itemize}
+ \item Use proper LaTeX sectioning commands (\verb|\section{}|, \verb|\subsection{}|) for headings.
+ \item Add alt text for all images using \verb|\pdftooltip{}| (see the figure example below).
+ \item Check color contrast in your figures and tables.
+ \item Ensure tables are created with \verb|\begin{tabular}| (not inserted as images).
+ \item Compile directly to PDF using \verb|pdflatex| (not print-to-PDF).
+ \item Tag your PDF for accessibility. This can be done by adding the \verb|\usepackage[articletitle=true, pdfa=true]{hyperref}| package and compiling with \verb|pdflatex|. You can also run Adobe Acrobat Pro's "Autotag Document" feature after compiling to add accessibility tags.
+\end{itemize}
+Check out the \href{https://guides.lib.montana.edu/accessibility/checklist}{MSU checklist} for more detailed information about document accessibility.
+
+\section{SUBMISSION}
+If you created your paper in LaTeX, \textbf{convert your paper to PDF file format and submit BOTH your .tex and PDF files.}
+
+Check the paper to ensure nothing changed during the conversion process. Always review formatting, citations, figures, tables, and equations closely in the PDF after converting.
+
+\section{QUESTIONS}
+For questions about the submission process, please contact \href{mailto:issw2026-program@icsevents.com}{issw2026-program@icsevents.com}.\\
+
+For questions about formatting and content, please contact the ISSW 2026 Technical Committee at \href{mailto:technical.committee@issw2026.com}{technical.committee@issw2026.com}.
+
+\phantomsection
+\addcontentsline{toc}{section}{ACKNOWLEDGEMENTS}
+\section*{ACKNOWLEDGEMENTS}
+Thank you.
+
+\printbibliography[title={REFERENCES}]
+
+\end{document}
