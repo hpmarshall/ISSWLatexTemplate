@@ -64,17 +64,14 @@
 % Hyperlinks + bookmarks (PDF/UA-friendly; metadata handled via DocumentMetadata)
 \RequirePackage{hyperref}
 \RequirePackage{bookmark}
-% ----- Hyperlink styling (blue, underlined, italic) -----
+% ----- Hyperlink styling (black, normal font, no underline) -----
 \hypersetup{
   colorlinks=true,        % colored links instead of boxes
-  linkcolor=blue,   % section headings, figure/table refs, etc.
-  urlcolor=blue,     % <---- URLs (mostly in references) NOT blue
-  citecolor=black   % optional: citations in text
+  linkcolor=black,   % section headings, figure/table refs, etc.
+  urlcolor=black,     % URLs (mostly in references)
+  citecolor=black,    % citations in text
+  pdfborder={0 0 0}   % no border/underline on links
 }
-
-% Make hyperlinks underlined and italic
-\let\oldhref\href
-\renewcommand{\href}[2]{\oldhref{#1}{\uline{#2}}}
 
 \RequirePackage[normalem]{ulem} % provides \uline
 \RequirePackage{titlesec}
@@ -84,6 +81,7 @@
   backend=biber,
   style=authoryear,  % author–year citations like NHESS
   giveninits=true,   % authors as "Smith, J. A."
+  uniquename=init,   % resolve conflict with giveninits
   maxcitenames=2,    % in-text: Smith & Miller, or Smith et al.
   maxbibnames=99,    % full author list in references
   sorting=nyt,       % name, year, title
@@ -92,8 +90,10 @@
   url=false          % normally NHESS prefers DOI over URL
 ]{biblatex}
 % -------- NHESS-like reference formatting (no italics in citations/refs) --------
+% Set bibliography font size to 8pt
 \AtBeginBibliography{%
-\renewcommand{\mkbibemph}[1]{#1}
+  \footnotesize  % 8pt font size
+  \renewcommand{\mkbibemph}[1]{#1}
 }
 % 2) Authors as "Family, G. I."
 \DeclareNameAlias{sortname}{family-given}
