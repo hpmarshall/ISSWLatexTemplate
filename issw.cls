@@ -68,7 +68,7 @@
 \hypersetup{
   colorlinks=true,        % colored links instead of boxes
   linkcolor=black,   % section headings, figure/table refs, etc.
-  urlcolor=black,     % URLs (mostly in references)
+  urlcolor=blue,     % URLs (mostly in references)
   citecolor=black,    % citations in text
   pdfborder={0 0 0}   % no border/underline on links
 }
