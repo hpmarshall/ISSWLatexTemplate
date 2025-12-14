@@ -68,7 +68,7 @@
 \hypersetup{
   colorlinks=true,        % colored links instead of boxes
   linkcolor=black,   % section headings, figure/table refs, etc.
-  urlcolor=blue,     % URLs (mostly in references)
+  urlcolor=black,     % URLs (mostly in references)
   citecolor=black,    % citations in text
   pdfborder={0 0 0}   % no border/underline on links
 }
@@ -168,7 +168,7 @@
   % #2 = author name (can contain \corref{...})
   \ifx\issw@authors\@empty
     \gdef\issw@authors{#2%
-      \ifx\relax#1\relax\else\textsuperscript{#1}\fi}%
+      \ifx\relax#1\relax\else\fi}%
   \else
     \g@addto@macro\issw@authors{, #2%
       \ifx\relax#1\relax\else\textsuperscript{#1}\fi}%
@@ -231,6 +231,7 @@
 
 
 % Title + abstract + keywords style similar to elsarticle_issw MaketitleBox
+
 
 \renewcommand\maketitle{%
   \if@twocolumn
@@ -370,8 +371,6 @@
 \newcommand{\bolduline}[1]{%
   {\renewcommand{\ULthickness}{0.14em}\uline{#1}}%
 }
-
-
 
 
 
