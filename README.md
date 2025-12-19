@@ -1,11 +1,18 @@
 # ISSWLatexTemplate
-Slight modification to awesome 2018 ISSW template.  Thanks JT Fischer!!!!!
 
-Corrections/suggestions appreciated.  Credit goes to JT and the 2018 organizing committee.
+A LaTex version of the ISSW template that aims to align with the official Word document as close as possible. Original credits go to JT Fischer and the Innsbruck 2018 organizing committee.
 
-ISSW2023_ProceedingsPaperFormattingGuidelines_latex.tex  % source tex file   
-issw_bibliography.bib % example bibtex bibliography database   
-elsarticle_issw2018.cls % latex class file for ISSW format (by JT Fischer)   
-Copernicus.bst % bibliography style file, from NHESS   
-issw_logo.png % example figure   
-.gitignore % used to ignore temporary latex files   
+## Files
+
+- `issw_template.tex`  % source tex file
+- `example.bib` % example bibtex bibliography database
+- `issw.cls` % latex class file for ISSW format (rewritten in 2026 for WCAG accessibility)
+- `Copernicus.bst` % bibliography style file, from NHESS
+- `issw_logo.png` % example figure
+
+## Version history
+
+- 2018: JT Fischer
+- 2023: HP Marshall
+- 2024: ?
+- 2026: Simon Horton, Martin Perfler
