@@ -74,7 +74,32 @@
   pdfborder={0 0 0}   % no border/underline on links
 }
 
-\RequirePackage[normalem]{ulem} % provides \uline
+\RequirePackage[normalem]{ulem} % kept for \sout etc. in user documents
+% Underlining used by this class is done with lua-ul rather than ulem.
+% ulem's \uline suppresses hyphenation and cannot break a boxed argument, so
+% a long heading in a 7.6 cm column runs past the column edge instead of
+% wrapping. lua-ul is LuaTeX-native, breaks across lines and hyphenates
+% normally. LuaTeX is already a hard requirement of this class (see the
+% engine check above).
+\RequirePackage{lua-ul}
+
+% Thickness of the rule under subsection headings.
+\newcommand\isswULthickness{0.08pt}
+
+% Breakable underline. In text it uses lua-ul; in math it falls back to the
+% kernel \underline, which lua-ul does not replace.
+\newcommand\isswuline[1]{\underLine[height=\isswULthickness]{#1}}
+
+% A \subsection is already underlined by this class, but authors frequently
+% wrap the title in \underline{...} as well. The kernel \underline builds an
+% unbreakable box, which silently defeats the wrapping above. Inside headings
+% we therefore route text-mode \underline through the breakable version and
+% leave math-mode \underline alone.
+\let\issw@kernelunderline\underline
+\newcommand\issw@breakableunderline{%
+  \renewcommand\underline[1]{%
+    \ifmmode\issw@kernelunderline{##1}\else\underLine{##1}\fi}%
+}
 \RequirePackage{titlesec}
 
 % Bibliography: biblatex + biber, natbib-compatible commands
@@ -221,7 +246,7 @@
   {\normalfont\rmfamily\mdseries\itshape\normalsize} % italic, non-bold
   {\thesubsection}                                   % label e.g. "1.1."
   {0.5em}
-  {\uline}                                          % thin underline under title text
+  {\issw@breakableunderline\isswuline}              % thin underline; wraps and hyphenates
 
 
 % Section spacing tuned to resemble ISSW Word template
@@ -375,7 +400,7 @@
 % Bold underline command
 
 \newcommand{\bolduline}[1]{%
-  {\renewcommand{\ULthickness}{0.14em}\uline{#1}}%
+  \underLine[height=0.14em]{#1}%
 }
 
 
