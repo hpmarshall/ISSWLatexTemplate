@@ -170,7 +170,7 @@
   % #2 = author name (can contain \corref{...})
   \ifx\issw@authors\@empty
     \gdef\issw@authors{#2%
-      \ifx\relax#1\relax\else\fi}%
+      \ifx\relax#1\relax\else\textsuperscript{#1}\fi}%
   \else
     \g@addto@macro\issw@authors{, #2%
       \ifx\relax#1\relax\else\textsuperscript{#1}\fi}%
@@ -188,8 +188,12 @@
 }
 
 
-% Mark corresponding author in the author line (star)
-\newcommand\corref[1]{\textsuperscript{*}\footnotemark}
+% Mark corresponding author in the author line (star).
+% No \footnotemark here: the corresponding-author block is emitted by
+% \maketitle via \footnotetext with \thefootnote made empty, so it is
+% unnumbered and carries a literal "*". A \footnotemark would print a
+% footnote number that matches nothing in the note itself.
+\newcommand\corref[1]{\textsuperscript{*}}
 
 
 % Store corresponding author block (to be printed as a footnote)
