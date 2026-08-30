@@ -122,6 +122,18 @@
   \footnotesize  % 8pt font size
   \renewcommand{\mkbibemph}[1]{#1}
 }
+% 1) Bibliography dates: year only. BibLaTeX writes full ISO dates (date =
+% {2014-12-17}), but authoryear's mergedate only folds the date into the
+% "(year)" label when the date is already year-precision. At finer precision it
+% gives up and prints the whole thing, so entries rendered as "(Dec. 17, 2014)"
+% in the reference list. Stripping month/day at use time restores year-only
+% output without editing the .bib. Clearing the label fields as well as the
+% plain ones also catches entries carrying a BibTeX-style "month = dec"
+% alongside a bare year.
+\AtEveryBibitem{%
+  \clearfield{month}\clearfield{day}%
+  \clearfield{labelmonth}\clearfield{labelday}%
+}
 % 2) Authors as "Family, G. I."
 \DeclareNameAlias{sortname}{family-given}
 \DeclareNameAlias{default}{family-given}
